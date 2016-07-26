@@ -55,4 +55,4 @@ Please read [Contributing.md] (https://github.com/Axway/api-management-artefacts
 
 
 ## License
-Apache License 2.0 (refer to document /license)
+Apache License 2.0 (refer to document [license] (https://github.com/Axway-API-Management/Policy-Loop-custom-filter/blob/master/LICENSE))
