@@ -1,0 +1,4 @@
+<typeSet>
+    <!-- CircuitLoopFilter Typedoc -->
+    <typedoc file="CircuitLoopFilterDesc.xml" />
+</typeSet>

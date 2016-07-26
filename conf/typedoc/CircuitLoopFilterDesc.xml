@@ -1,0 +1,25 @@
+<entityStoreData>
+	<entityType name="CircuitLoopFilter" extends="Filter">
+		<constant name="class" type="string" value="rslr.circuit.loop.CircuitLoopFilter" />
+		<field name="loopType" type="integer" cardinality="1" default="1" />
+		<field name="loopCondition" type="string" cardinality="1" default="${1 + 1 == 2}" />
+		<field name="loopCircuit" type="@FilterCircuit" cardinality="?" />
+		<field name="loopMax" type="integer" cardinality="1" default="10" />
+		<field name="loopTimeout" type="integer" cardinality="1" default="10000" />
+
+		<field name="loopErrorCircuit" type="boolean" cardinality="1" default="1" />
+		<field name="loopErrorCondition" type="boolean" cardinality="1" default="0" />
+		<field name="loopErrorMax" type="boolean" cardinality="1" default="0" />
+		<field name="loopErrorTimeout" type="boolean" cardinality="1" default="0" />
+		<field name="loopErrorEmpty" type="boolean" cardinality="1" default="0" />
+	</entityType>
+
+	<!-- Internationalization for logging / audit trail -->
+	<entity xmlns="http://www.vordel.com/2005/06/24/entityStore" type="InternationalizationFilter">
+		<key type="Internationalization"><id field="name" value="Internationalization Default" /></key>
+		<fval name="type"><value>Policy Loop Filter</value></fval>
+		<fval name="logFatal"><value>Error in the Policy Loop Filter. Error: ${circuit.exception}</value></fval>
+		<fval name="logFailure"><value>Failed in the Policy Loop Filter</value></fval>
+		<fval name="logSuccess"><value>Success in the Policy Loop Filter</value></fval>
+	</entity>
+</entityStoreData>
