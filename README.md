@@ -45,14 +45,14 @@ Selector expressions used in configuration do not appear as requested attributes
 
 ## Contributing
 
-Please read [Contributing.md] (https://github.com/Axway/api-management-artefacts/blob/master/Contributing.md) for details on our code of conduct, and the process for submitting pull requests to us.
+Please read [Contributing.md] (/Contributing.md) for details on our code of conduct, and the process for submitting pull requests to us.
 
 ## Team
 
 ![alt text][Axwaylogo] Axway Team
 
-[Axwaylogo]: https://github.com/Axway/api-management-artefacts/blob/master/AxwayLogoSmall.png  "Axway logo"
+[Axwaylogo]: https://github.com/Axway-API-Management/Axway-API-Management.github.io/blob/master/images/AxwayLogoSmall.png  "Axway logo"
 
 
 ## License
-Apache License 2.0 (refer to document [license] (https://github.com/Axway-API-Management/Policy-Loop-custom-filter/blob/master/LICENSE))
+Apache License 2.0 (refer to document [license] (/LICENSE))
