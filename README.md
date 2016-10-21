@@ -51,7 +51,7 @@ Please read [Contributing.md] (/Contributing.md) for details on our code of cond
 
 ![alt text][Axwaylogo] Axway Team
 
-[Axwaylogo]: https://github.com/Axway-API-Management/Common/blob/master/img/AxwayLogoSmall.png  "Axway logo"
+[Axwaylogo]: https://github.com/Axway-API-Management/Common/blob/master/img/AxwayLogoSmall.png "Axway logo"
 
 
 ## License
