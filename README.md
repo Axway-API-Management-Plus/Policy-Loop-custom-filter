@@ -30,7 +30,7 @@ Be aware the maximum loop iteration time is checked AFTER the child policy has r
 ```
 ![alt text][Screenshot1]
 
-[Screenshot1]: https://github.com/Axway/api-management-artefacts/Policy-Loop-custom-filter/blob/master/Readme/Screenshot1.png  "Screenshot1"
+[Screenshot1]: https://github.com/Axway-API-Management/Policy-Loop-custom-filter/blob/master/Readme/Screenshot1.png  "Screenshot1"
 
 
 ## Bug and Caveats
