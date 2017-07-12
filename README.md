@@ -9,6 +9,7 @@ This filter allows you to loop on a Policy. There is actually 4 exit conditions:
 This artefact was successfully tested for the following versions:
 - V7.4.0
 - V7.4.1
+- V7.5.3 SP1
 
 
 ## Install
