@@ -55,4 +55,4 @@ Please read [Contributing.md] (https://github.com/Axway-API-Management/Common/bl
 [Axwaylogo]: https://github.com/Axway-API-Management/Common/blob/master/img/AxwayLogoSmall.png  "Axway logo"
 
 ## License
-Apache License 2.0 (refer to document [license] (/LICENSE))
+[Apache License 2.0](LICENSE)
