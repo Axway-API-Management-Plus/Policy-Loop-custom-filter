@@ -36,16 +36,16 @@ public class CircuitLoopProcessor extends MessageProcessor {
 	public void filterAttached(ConfigContext ctx, Entity entity) throws EntityStoreException {
 		super.filterAttached(ctx, entity);
 
-		this.loopType = new Selector<Integer>(entity.getStringValue("loopType"), Integer.class);
-		this.loopCondition = new Selector<Boolean>(entity.getStringValue("loopCondition"), Boolean.class);
-		this.loopMax = new Selector<Integer>(entity.getStringValue("loopMax"), Integer.class);
-		this.loopTimeout = new Selector<Integer>(entity.getStringValue("loopTimeout"), Integer.class);
+		this.loopType = new Selector<>(entity.getStringValue("loopType"), Integer.class);
+		this.loopCondition = new Selector<>(entity.getStringValue("loopCondition"), Boolean.class);
+		this.loopMax = new Selector<>(entity.getStringValue("loopMax"), Integer.class);
+		this.loopTimeout = new Selector<>(entity.getStringValue("loopTimeout"), Integer.class);
 
-		this.loopErrorCircuit = new Selector<Boolean>(entity.getStringValue("loopErrorCircuit"), Boolean.class);
-		this.loopErrorCondition = new Selector<Boolean>(entity.getStringValue("loopErrorCondition"), Boolean.class);
-		this.loopErrorMax = new Selector<Boolean>(entity.getStringValue("loopErrorMax"), Boolean.class);
-		this.loopErrorTimeout = new Selector<Boolean>(entity.getStringValue("loopErrorTimeout"), Boolean.class);
-		this.loopErrorEmpty = new Selector<Boolean>(entity.getStringValue("loopErrorEmpty"), Boolean.class);
+		this.loopErrorCircuit = new Selector<>(entity.getStringValue("loopErrorCircuit"), Boolean.class);
+		this.loopErrorCondition = new Selector<>(entity.getStringValue("loopErrorCondition"), Boolean.class);
+		this.loopErrorMax = new Selector<>(entity.getStringValue("loopErrorMax"), Boolean.class);
+		this.loopErrorTimeout = new Selector<>(entity.getStringValue("loopErrorTimeout"), Boolean.class);
+		this.loopErrorEmpty = new Selector<>(entity.getStringValue("loopErrorEmpty"), Boolean.class);
 
 		CircuitLoopFilter filter = (CircuitLoopFilter) getFilter();
 		DelayedESPK loopReference = new DelayedESPK(filter.getLoopCircuitPK());

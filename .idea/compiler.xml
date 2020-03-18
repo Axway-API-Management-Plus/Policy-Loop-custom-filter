@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <bytecodeTargetLevel>
+      <module name="P-fix.main" target="1.8" />
+      <module name="P-fix.test" target="1.8" />
+      <module name="Policy--fix.main" target="1.8" />
+      <module name="Policy--fix.test" target="1.8" />
+      <module name="Policy-Loop-c-fix.main" target="1.8" />
+      <module name="Policy-Loop-c-fix.test" target="1.8" />
+      <module name="Policy-Loop-custom-filter.main" target="1.8" />
+      <module name="Policy-Loop-custom-filter.test" target="1.8" />
+      <module name="Policy-Loop-custom-fix.main" target="1.8" />
+      <module name="Policy-Loop-custom-fix.test" target="1.8" />
+      <module name="sso-fix.main" target="1.8" />
+      <module name="sso-fix.test" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
