@@ -50,7 +50,7 @@ public class CircuitLoopFilter extends DefaultFilter implements DelegatingFilter
 	@Override
 	public Set<ESPK> getReferencedCircuitPKs(GlobalProperties props) {
 		ESPK loopCircuitPK = getLoopCircuitPK();
-		Set<ESPK> pks = new HashSet<ESPK>();
+		Set<ESPK> pks = new HashSet<>();
 
 		if (!EntityStore.ES_NULL_PK.equals(loopCircuitPK)) {
 			pks.add(loopCircuitPK);
