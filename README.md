@@ -10,6 +10,7 @@ This artefact was successfully tested for the following versions:
 - V7.4.0
 - V7.4.1
 - V7.5.3 SP1
+- V7.7
 
 
 ## Install
