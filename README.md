@@ -12,6 +12,24 @@ This artefact was successfully tested for the following versions:
 - V7.5.3 SP1
 - V7.7
 
+## Compile/Build
+```
+• In build.gradle file, update dependencies location :
+
+    dependencies {
+        compile fileTree(dir: '<Install_dir_apigateway>/apigateway/system/lib', include: '*.jar')
+        compile fileTree(dir: '<Install_dir_apigateway>/apigateway/system/lib/modules', include: '*.jar')
+        compile fileTree(dir: '<Install_dir_apigateway>/apigateway/system/lib/plugins', include: '*.jar')
+
+        compile fileTree(dir: '<Install_dir_policyStudio>/policystudio/plugins', include: '*.jar')
+        compile files("<Install_dir_policyStudio>/policystudio/plugins/com.vordel.rcp.filterbase_<current_version>")
+    }
+
+    where <Install_dir_apigateway>, <Install_dir_policyStudio> and <current_version> are replaced with adequate values 
+
+• run gradlew build
+
+```
 
 ## Install
 
