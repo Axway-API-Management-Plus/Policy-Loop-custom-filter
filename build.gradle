@@ -11,12 +11,16 @@ repositories {
     mavenCentral()
 }
 
-dependencies {
-    compile fileTree(dir: '/Users/rnatarajan/AxwayProducts/apim_7_7/lib', include: '*.jar')
-    compile fileTree(dir: '/Users/rnatarajan/AxwayProducts/apim_7_7/lib/modules', include: '*.jar')
-    compile fileTree(dir: '/Users/rnatarajan/AxwayProducts/apim_7_7/lib/plugins', include: '*.jar')
-    compile fileTree(dir: '/Users/rnatarajan/AxwayProducts/apim_7_7/plugins', include: '*.jar')
 
-    compile files("/Users/rnatarajan/AxwayProducts/apim_7_7/plugins/com.vordel.rcp.filterbase_7.7.0.v20200206-1554")
+
+dependencies {
+    compile fileTree(dir: '/Users/rnatarajan/AxwayProducts/apim_7_7_mar2021/lib', include: '*.jar')
+    compile fileTree(dir: '/Users/rnatarajan/AxwayProducts/apim_7_7_mar2021/lib/modules', include: '*.jar')
+    compile fileTree(dir: '/Users/rnatarajan/AxwayProducts/apim_7_7_mar2021/lib/plugins', include: '*.jar')
+
+    // policystudio
+    compile fileTree(dir: '/Users/rnatarajan/AxwayProducts/apim_7_7_mar2021/plugins', include: '*.jar')
+
+    compile files("/Users/rnatarajan/AxwayProducts/apim_7_7_mar2021/plugins/com.vordel.rcp.filterbase_7.7.0.v20210414-1740")
 
 }
