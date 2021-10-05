@@ -8,8 +8,8 @@ public class CircuitLoopFilterPage extends VordelPage {
 	public CircuitLoopFilterPage() {
 		super("circuitloopPage");
 
-		setTitle(resolve("CIRCUITLOOP_PAGE"));
-		setDescription(resolve("CIRCUITLOOP_PAGE_DESCRIPTION"));
+		setTitle(Resources.CIRCUITLOOP_PAGE);
+		setDescription(Resources.CIRCUITLOOP_PAGE_DESCRIPTION);
 		setPageComplete(false);
 	}
 
