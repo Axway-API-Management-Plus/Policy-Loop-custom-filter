@@ -9,7 +9,6 @@ import com.vordel.client.manager.Manager;
 import com.vordel.client.manager.ManagerEntityStore;
 import com.vordel.client.manager.filter.DefaultGUIFilter;
 import com.vordel.client.manager.filter.DelegatingFilterSynchronizer;
-import com.vordel.client.manager.wizard.VordelPage;
 import com.vordel.common.util.PropDef;
 import com.vordel.config.ConfigContext;
 import com.vordel.es.ESPK;
@@ -19,7 +18,6 @@ import com.vordel.es.EntityStoreException;
 import com.vordel.trace.Trace;
 
 import java.util.Set;
-import java.util.Vector;
 
 public class CircuitLoopGUIFilter extends DefaultGUIFilter implements ICircuitDelegate {
 	public static final String ERR_PARENTPOINTER = "Configuration error the circuit loop '%s' is pointing to it's parent circuit";
@@ -79,21 +77,6 @@ public class CircuitLoopGUIFilter extends DefaultGUIFilter implements ICircuitDe
 
 	private void setLoopCircuit(Circuit loopCircuit) {
 		this.loopCircuit = loopCircuit;
-	}
-
-	@Override
-	public Vector<VordelPage> getPropertyPages() {
-		Vector<VordelPage> pages = new Vector<>();
-
-		pages.add(new CircuitLoopFilterPage());
-		pages.add(createLogPage());
-
-		return pages;
-	}
-
-	@Override
-	public String[] getCategories() {
-		return new String[] { ("FILTER_GROUP_CIRCUIT") };
 	}
 
 	@Override
