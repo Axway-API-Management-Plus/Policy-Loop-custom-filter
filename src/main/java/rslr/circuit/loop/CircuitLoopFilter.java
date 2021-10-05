@@ -5,7 +5,6 @@ import java.util.Set;
 
 import com.vordel.circuit.DefaultFilter;
 import com.vordel.circuit.DelegatingFilter;
-import com.vordel.circuit.FilterContainerImpl;
 import com.vordel.circuit.GlobalProperties;
 import com.vordel.circuit.MessageProcessor;
 import com.vordel.config.ConfigContext;
@@ -18,12 +17,6 @@ public class CircuitLoopFilter extends DefaultFilter implements DelegatingFilter
 	@Override
 	public Class<? extends MessageProcessor> getMessageProcessorClass() throws ClassNotFoundException {
 		return CircuitLoopProcessor.class;
-	}
-
-	@Override
-	@SuppressWarnings("unchecked")
-	public Class<? extends FilterContainerImpl> getConfigPanelClass() throws ClassNotFoundException {
-		return (Class<? extends FilterContainerImpl>) Class.forName("rslr.circuit.loop.CircuitLoopGUIFilter");
 	}
 
 	private ESPK loopCircuitPK = EntityStore.ES_NULL_PK;
