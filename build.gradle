@@ -11,16 +11,31 @@ repositories {
     mavenCentral()
 }
 
-
+def apim_folder = '/Users/cwilliams/Downloads/APIGateway_7.7.20210830_Core_linux-x86-64_BN02/content/system'
+def ps_folder = '/Users/cwilliams/SharedFolder/apim'
 
 dependencies {
-    compile fileTree(dir: '/Users/rnatarajan/AxwayProducts/apim_7_7_mar2021/lib', include: '*.jar')
-    compile fileTree(dir: '/Users/rnatarajan/AxwayProducts/apim_7_7_mar2021/lib/modules', include: '*.jar')
-    compile fileTree(dir: '/Users/rnatarajan/AxwayProducts/apim_7_7_mar2021/lib/plugins', include: '*.jar')
+    compile fileTree(dir: "${apim_folder}/lib", include: '*.jar')
+    compile fileTree(dir: "${apim_folder}/lib/modules", include: '*.jar')
+    compile fileTree(dir: "${apim_folder}/lib/plugins", include: '*.jar')
 
     // policystudio
-    compile fileTree(dir: '/Users/rnatarajan/AxwayProducts/apim_7_7_mar2021/plugins', include: '*.jar')
+    compile fileTree(dir: "${ps_folder}/plugins", include: '*.jar')
 
-    compile files("/Users/rnatarajan/AxwayProducts/apim_7_7_mar2021/plugins/com.vordel.rcp.filterbase_7.7.0.v20210414-1740")
+    compile files("${ps_folder}/plugins/com.vordel.rcp.filterbase_7.7.0.v20211004-1323")
 
+}
+
+jar {
+    manifest {
+        attributes('Bundle-Name': 'Circuit Loop Filter',
+                   'Bundle-SymbolicName': 'rslr.circuit.loop;singleton:=true',
+                   'Bundle-Version': '2.0.0',
+                   'Bundle-Vendor': 'Axway, Inc.',
+                   'Bundle-ClassPath': '.',
+                   'Export-Package': 'rslr.circuit.loop',
+                   'Bundle-RequiredExecutionEnvironment': 'JavaSE-1.7',
+                   'Bundle-ManifestVersion': '2',
+                   'Require-Bundle': 'com.vordel.rcp.filterbase')
+    }
 }

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         id="com.vordel.rcp.filterbase.filterGUI.loop"
+         point="com.vordel.rcp.filterbase.filterGUI">
+      <filter
+            class="rslr.circuit.loop.CircuitLoopFilter"
+            icon="filter_small"
+            name="Circuit Loop"
+            page="rslr.circuit.loop.CircuitLoopFilterPage">
+         <category
+               id="com.vordel.ui.filter.category.utility" />
+      </filter>
+   </extension>
+   <extension
+         point="com.vordel.rcp.filterbase.filterModel">
+      <filter
+            class="rslr.circuit.loop.CircuitLoopGUIFilter"
+            type="rslr.circuit.loop.CircuitLoopFilter">
+      </filter>
+   </extension>
+</plugin>
