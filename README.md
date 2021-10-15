@@ -13,9 +13,10 @@ This artefact was successfully tested for the following versions:
 - V7.7
 
 ## Compile/Build
-```
-• In build.gradle file, update dependencies location :
 
+In build.gradle file, update dependencies location :
+
+```
     dependencies {
         compile fileTree(dir: '<Install_dir_apigateway>/apigateway/system/lib', include: '*.jar')
         compile fileTree(dir: '<Install_dir_apigateway>/apigateway/system/lib/modules', include: '*.jar')
@@ -24,11 +25,12 @@ This artefact was successfully tested for the following versions:
         compile fileTree(dir: '<Install_dir_policyStudio>/policystudio/plugins', include: '*.jar')
         compile files("<Install_dir_policyStudio>/policystudio/plugins/com.vordel.rcp.filterbase_<current_version>")
     }
+```
 
-    where <Install_dir_apigateway>, <Install_dir_policyStudio> and <current_version> are replaced with adequate values 
+where <Install_dir_apigateway>, <Install_dir_policyStudio> and <current_version> are replaced with adequate values and finally run
 
-• run gradlew build
-
+```
+gradlew build
 ```
 
 ## Install
