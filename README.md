@@ -15,20 +15,11 @@ This artefact was successfully tested for the following versions:
 
 ## Compile/Build
 
-In build.gradle file, update dependencies location :
+In `build.gradle` file, update dependencies location:
 
-```
-    dependencies {
-        compile fileTree(dir: '<Install_dir_apigateway>/apigateway/system/lib', include: '*.jar')
-        compile fileTree(dir: '<Install_dir_apigateway>/apigateway/system/lib/modules', include: '*.jar')
-        compile fileTree(dir: '<Install_dir_apigateway>/apigateway/system/lib/plugins', include: '*.jar')
-
-        compile fileTree(dir: '<Install_dir_policyStudio>/policystudio/plugins', include: '*.jar')
-        compile files("<Install_dir_policyStudio>/policystudio/plugins/com.vordel.rcp.filterbase_<current_version>")
-    }
-```
-
-where <Install_dir_apigateway>, <Install_dir_policyStudio> and <current_version> are replaced with adequate values and finally run
+- Set the variable `apim_folder` to you API-Gateway installation folder (e.g. `opt/Axway/APIM/apigateway`)
+- Set the variable `ps_folder` to you Policy-Studio installation folder (e.g. `/opt/Axway/APIM/policystudio`)
+- Set the variable `filterbase_folder` to the version Policy-Studio delivers (check for a folder ...studio/plugins/com.vordel.rcp.filterbase....)
 
 ```
 gradlew build
@@ -36,30 +27,25 @@ gradlew build
 
 ## Install
 
-```
-• Copy the jar file in the API Gateway VORDEL_HOME/ext/lib and restart API Gateway instances
-• Add the jar file to Policy Studio Runtime Dependencies,
-• Import the custom filter set file in the Policy studio.
-
-```
+- Copy the jar file in the API Gateway VORDEL_HOME/ext/lib and restart API Gateway instances
+- Add the jar file to Policy Studio Runtime Dependencies,
+- Import the custom filter set file ([CircuitLoopTypeSet.xml](https://raw.githubusercontent.com/Axway-API-Management-Plus/Policy-Loop-custom-filter/master/src/main/resources/CircuitLoopTypeSet.xml)) in Policystudio --> Import --> Import custom filters.
 
 ## Usage
 
-```
 You can choose between while or do/while loop.
 Each of exit condition can be handled as success (filter returns true) or error (filter returns false).
 The loop condition is a selector expression (like the evaluate filter).
 Be aware the maximum loop iteration time is checked AFTER the child policy has returned, it WILL NOT stop the child process.
-```
+
 ![alt text][Screenshot1]
 
 [Screenshot1]: https://github.com/Axway-API-Management/Policy-Loop-custom-filter/blob/master/Readme/Screenshot1.png  "Screenshot1"
 
 
 ## Bug and Caveats
-```
+
 Selector expressions used in configuration do not appear as requested attributes in policy studio (to be done)
-```
 
 ## Changelog
 - Added exit condition error configuration (correct the 'no iteration bug returning false').
