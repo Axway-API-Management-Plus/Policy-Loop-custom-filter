@@ -105,8 +105,9 @@ public class CircuitLoopProcessor extends MessageProcessor {
 
 		while (loop) {
 			/* execute loop (and exit if the loop circuit return false) */
+			m.put("loopCount", count);
 			loop = executeLoop(p, m);
-
+			count++;
 			if (!loop) {
 				/*
 				 * loop circuit did return an error, check for error condition
@@ -122,7 +123,7 @@ public class CircuitLoopProcessor extends MessageProcessor {
 					 */
 					result = !isErrorCondition(m, loopErrorTimeout);
 				} else if (max > 0) {
-					count++;
+					
 
 					/* Check if the maximum iteration count has been reached */
 					loop = count < max;
